@@ -1,0 +1,40 @@
+body {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    background-color: black;
+    color: gold;
+    align-items: center;
+  }
+
+  h1{
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    background-color: lightgray;
+    align-items: center;
+  }
+
+  #Title{
+    color: gold;
+  }
+
+  #nextBtn{
+    margin: 25px auto 0 auto;
+    color: gold;
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    width: 100px;
+    border: 1px solid gold;
+  }
+
+  #nextBtn:hover{
+    background-color: red;
+  }
+
+  #explain{
+    margin: 10px;
+  }
