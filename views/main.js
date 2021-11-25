@@ -56,7 +56,7 @@ xmlhttp.onreadystatechange = function () {
                     else {
                         review = true; // turn review on for next question
                         var thisQ = allQuestions[Page];
-                        // display a question
+                        // display a question, emptying the answers part so only the radio buttons for that questio show up
                         $("#quiz").show();
                         $("#explain").show();
                         $("#current-question").html("Question: " + Page + "/" + allQuestions.length);
@@ -66,7 +66,7 @@ xmlhttp.onreadystatechange = function () {
                         var choiceArray = thisQ.options;
                         //Making the page show the radio buttons
                         for (var i = 0; i < choiceArray.length; i++) {
-                            $("#answers").append('<div class="form-radio a' + i + '"><input type="radio" name="q' + Page + '" value="' + i + '"> ' + choiceArray[i] + '</div>');
+                            $("#answers").append('<div class="radio a' + i + '"><input type="radio" name="q' + Page + '" value="' + i + '"> ' + choiceArray[i] + '</div>');
                         }
                     }
 
@@ -74,7 +74,6 @@ xmlhttp.onreadystatechange = function () {
             }
         })
     });
-
 }
-xmlhttp.open("GET", "questions.json", true);
+xmlhttp.open("GET", "questions.json", true); //AJAX
 xmlhttp.send();
